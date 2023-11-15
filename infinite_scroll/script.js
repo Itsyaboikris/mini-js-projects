@@ -12,7 +12,6 @@ const apiKey = 'abcdefg1234567'
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 function imageLoaded() {
-    console.log('hello')
     imagesLoaded++;
     if (imagesLoaded === totalImages) {
         ready = true;
@@ -52,8 +51,7 @@ function displayPhotos() {
         })
         
         img.addEventListener('load', imageLoaded())
-console.log(item)
-console.log(img)
+
         item.appendChild(img);
         imageContainer.appendChild(item);
     });
